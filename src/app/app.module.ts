@@ -7,12 +7,14 @@ import { HomeComponent } from './home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmListeComponent } from './film-liste.component';
 import {MatTableModule} from "@angular/material/table";
+import { FilmDetailsComponent } from './film-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FilmListeComponent
+    FilmListeComponent,
+    FilmDetailsComponent
   ],
   imports: [
     BrowserModule,
