@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmListeComponent } from './film-liste.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FilmListeComponent } from './film-liste.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

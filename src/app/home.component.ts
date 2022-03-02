@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Film, Films} from "./film";
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <p>
       home works!
     </p>
+    <app-film-liste></app-film-liste>
   `,
   styles: [
   ]
