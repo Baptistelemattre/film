@@ -26,7 +26,7 @@ import {Film, Films} from "./film";
 
       <!-- La ligne -->
       <tr mat-header-row *matHeaderRowDef="lesColonnes"></tr>
-      <tr mat-row *matRowDef="let row; columns: lesColonnes;"></tr>
+      <tr mat-row *matRowDef="let row; columns: lesColonnes;" (click)="selectFilm(row)"></tr>
     </table>
   `,
   styles: [
@@ -36,10 +36,15 @@ import {Film, Films} from "./film";
 export class FilmListeComponent implements OnInit {
   dataSource: Film[] = Films;
   lesColonnes: string[] = ['title', 'year', 'director'];
+  filmSelectionne:Film|undefined;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  selectFilm(row: Film) {
+    this.filmSelectionne = row;
+  }
 }
