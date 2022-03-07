@@ -5,15 +5,7 @@ import {Film, Films} from "./film";
 @Component({
   selector: 'app-film-details',
   template: `
-    <p>
-      film-details works!
-      {{filmSelection.title}}
-    </p>
-    <p>
-      <span matBadge="{{filmSelection.year|badgeAnnee}}" matBadgeSize="small" matBadgeOverlap="false" matBadgeColor="accent">
-        {{filmSelection.year}}
-      </span>
-    </p>
+    <app-film-card [filmSelection]="filmSelection"></app-film-card>
   `,
   styles: [
   ]

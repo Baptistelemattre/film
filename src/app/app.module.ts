@@ -12,6 +12,10 @@ import { FilmDetailsComponent } from './film-details.component';
 import * as dayjs from "dayjs";
 import { BadgeAnneePipe } from './badge-annee.pipe';
 import { FilmRatingComponent } from './film-rating.component';
+import { FilmCardComponent } from './film-card.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
@@ -21,14 +25,18 @@ import { FilmRatingComponent } from './film-rating.component';
     FilmListeComponent,
     FilmDetailsComponent,
     BadgeAnneePipe,
-    FilmRatingComponent
+    FilmRatingComponent,
+    FilmCardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatTableModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
