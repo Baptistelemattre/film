@@ -8,19 +8,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmListeComponent } from './film-liste.component';
 import {MatTableModule} from "@angular/material/table";
 import { FilmDetailsComponent } from './film-details.component';
+import * as dayjs from "dayjs";
+import { BadgeAnneePipe } from './badge-annee.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FilmListeComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+    BadgeAnneePipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

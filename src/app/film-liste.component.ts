@@ -28,6 +28,9 @@ import {Film, Films} from "./film";
       <tr mat-header-row *matHeaderRowDef="lesColonnes"></tr>
       <tr mat-row *matRowDef="let row; columns: lesColonnes;" (click)="selectFilm(row)"></tr>
     </table>
+
+    <div *ngIf="filmSelectionne != undefined"><app-film-details [filmSelection]="filmSelectionne"></app-film-details></div>
+
   `,
   styles: [
     'table {margin: auto auto; min-width: 600px}'
@@ -36,15 +39,23 @@ import {Film, Films} from "./film";
 export class FilmListeComponent implements OnInit {
   dataSource: Film[] = Films;
   lesColonnes: string[] = ['title', 'year', 'director'];
-  filmSelectionne:Film|undefined;
+  filmSelectionne:Film|undefined = undefined;
 
   constructor() {
+
   }
 
   ngOnInit(): void {
   }
 
   selectFilm(row: Film) {
-    this.filmSelectionne = row;
+    if (row.title == this.filmSelectionne?.title)
+      this.filmSelectionne = undefined;
+    else
+      this.filmSelectionne = row;
+
+
+    console.log(this.filmSelectionne);
   }
+
 }
