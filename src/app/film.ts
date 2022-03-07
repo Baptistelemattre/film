@@ -1,6 +1,9 @@
 export interface Film{
   title: string;
   year: number;
+  affiche:string;
+  entree:number;
+  rating: number;
   director: string;
   actors:string[]
 }

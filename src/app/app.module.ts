@@ -11,6 +11,7 @@ import {MatTableModule} from "@angular/material/table";
 import { FilmDetailsComponent } from './film-details.component';
 import * as dayjs from "dayjs";
 import { BadgeAnneePipe } from './badge-annee.pipe';
+import { FilmRatingComponent } from './film-rating.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BadgeAnneePipe } from './badge-annee.pipe';
     HomeComponent,
     FilmListeComponent,
     FilmDetailsComponent,
-    BadgeAnneePipe
+    BadgeAnneePipe,
+    FilmRatingComponent
   ],
   imports: [
     BrowserModule,
