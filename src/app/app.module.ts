@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { Directive } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatBadge, MatBadgeModule} from "@angular/material/badge";
@@ -16,6 +17,10 @@ import { FilmCardComponent } from './film-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
+import { FilmListeCartesComponent } from './film-liste-cartes.component';
+import {MatChipsModule} from "@angular/material/chips";
+import {CardBorderDirective} from "./card-border";
+
 
 
 @NgModule({
@@ -26,7 +31,9 @@ import {MatListModule} from "@angular/material/list";
     FilmDetailsComponent,
     BadgeAnneePipe,
     FilmRatingComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    FilmListeCartesComponent,
+    CardBorderDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,8 @@ import {MatListModule} from "@angular/material/list";
     MatBadgeModule,
     MatCardModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,8 @@ import {Film} from "./film";
 @Component({
   selector: 'app-film-card',
   template: `
-    <table>
-    <mat-card class="{{filmSelection.title}}">
+    <mat-card>
+      <mat-card-title><mat-icon>today</mat-icon>{{filmSelection.year}}</mat-card-title>
       <mat-card-title-group>
         <mat-card-title>{{filmSelection.title}}</mat-card-title>
         <mat-card-subtitle>{{filmSelection.director}}</mat-card-subtitle>
@@ -13,19 +13,17 @@ import {Film} from "./film";
       </mat-card-title-group>
       <mat-card-content>
         <h2>Liste des acteurs</h2>
-        <p>
-            <mat-list-item *ngFor="let actor of filmSelection.actors">
-                <span matLine class="demo-2"> {{actor}} </span>
-            </mat-list-item>
-        </p>
+        <mat-chip-list>
+          <mat-chip *ngFor="let acteur of filmSelection.actors">{{acteur}}</mat-chip>
+        </mat-chip-list>
+        <br>
         <app-film-rating [rating]="filmSelection.rating"></app-film-rating>
         <h2 id="entre">Nombre D'entrée : {{filmSelection.entree}} </h2>
       </mat-card-content>
     </mat-card>
-    </table>
   `,
   styles: [
-    'table {margin: auto auto; min-width: 600px;} #entre{text-align: right}'
+    'mat-card {margin: auto auto; max-width: 425px; background-color: lightgrey;border: 0.1em solid;border-radius: 1em} #entre{text-align: right;} mat-card-subtitle.year{border: 0.01em solid lightcoral; border-radius:1em;  background-color: lightsalmon;} mat-card-title{text-align: center}'
   ]
 })
 export class FilmCardComponent implements OnInit {
